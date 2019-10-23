@@ -10,19 +10,21 @@
         <ToolbarItem Text="+" Command="{Binding AddAlumnoCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
             <StackLayout>
-                <ListView ItemsSource="{Binding Alumnos}" SelectedItem="{Binding AlumnoSelected}" HasUnevenRows="True">
-                    <ListView.Header>
-                        <Button Text="Ver detalle de victima" Command="{Binding DetailAlumnoCommand}"/>
-                    </ListView.Header>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextCell Text="{Binding Nombres}" Detail="{Binding Grado}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <StackLayout>
+                    <ListView ItemsSource="{Binding Alumnos}" SelectedItem="{Binding AlumnoSelected}" HasUnevenRows="True">
+                        <ListView.Header>
+                            <Button Text="Ver detalle de victima" Command="{Binding DetailAlumnoCommand}"/>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Nombres}" Detail="{Binding Grado}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

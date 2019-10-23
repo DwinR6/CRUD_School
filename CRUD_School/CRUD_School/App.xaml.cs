@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRUD_School.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace CRUD_School
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.InicioAlumnosView());
+            MainPage = new NavigationPage(new InicioAlumnosView());
         }
 
         protected override void OnStart()

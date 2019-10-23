@@ -29,7 +29,6 @@ namespace CRUD_School.ViewModel
             dbFilePath = new DbFilePath();
             SaveCommand = new Command(Save);
             DeleteCommand = new Command(Delete);
-            UpdateCommand = new Command(Update);
 
         }
 
@@ -38,19 +37,14 @@ namespace CRUD_School.ViewModel
             AlumnoSelected = alumno;
             if(AlumnoSelected != null)
             {
-                this.Nombres = alumno.Nombres;
-                this.Apellidos = alumno.Apellidos;
-                this.FechaNacimiento = alumno.FechaNacimiento;
-                this.Grado = alumno.Grado;
-                this.Seccion = alumno.Seccion;
-                this.NumeroMovil = alumno.NumeroMovil;
-                this.Edad = alumno.Edad;
+                Nombres = alumno.Nombres;
+                Apellidos = alumno.Apellidos;
+                FechaNacimiento = alumno.FechaNacimiento;
+                Grado = alumno.Grado;
+                Seccion = alumno.Seccion;
+                NumeroMovil = alumno.NumeroMovil;
+                Edad = alumno.Edad;
             }
-        }
-
-        private void Update()
-        {
-            
         }
 
         async void Delete()

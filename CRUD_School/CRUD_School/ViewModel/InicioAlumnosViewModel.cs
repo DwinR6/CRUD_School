@@ -16,7 +16,7 @@ namespace CRUD_School.ViewModel
         public ObservableCollection<AlumnosModel> Alumnos
         {
             get { return _Alumnos; }
-            set { _Alumnos = value; }
+            set { _Alumnos = value; OnPropertyChanged(); }
         }
         public Command AddAlumnoCommand { get; set; }
         public Command DetailAlumnoCommand { get; set; }
