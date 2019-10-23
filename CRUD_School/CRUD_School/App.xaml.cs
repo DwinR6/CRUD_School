@@ -11,7 +11,7 @@ namespace CRUD_School
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new View.InicioAlumnosView());
         }
 
         protected override void OnStart()

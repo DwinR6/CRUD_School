@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_School.View.NewAlumnosView"
+             xmlns:vm="clr-namespace:CRUD_School.ViewModel">
+    <ContentPage.BindingContext>
+        <vm:NewAlumnosViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Nombres" Text="{Binding Nombres}"/>
+            <Entry Placeholder="Apellidos" Text="{Binding Apellidos}"/>
+            <Entry Placeholder="Fecha de nacimiento" Text="{Binding FechaNacimiento}"/>
+            <Entry Placeholder="Edad" Text="{Binding Edad}"/>
+            <Entry Placeholder="Numero de telefono" Text="{Binding NumeroMovil}"/>
+            <Entry Placeholder="Grado" Text="{Binding Grado}"/>
+            <Entry Placeholder="Seccion"  Text="{Binding Seccion}"/>            
+            <StackLayout BackgroundColor="Black">
+                <Button Text="Guardar cambios" Command="{Binding SaveCommand}"/>
+                <Button Text="Eliminar" Command="{Binding DeleteCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

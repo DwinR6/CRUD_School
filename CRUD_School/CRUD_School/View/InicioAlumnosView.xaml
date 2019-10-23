@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUD_School.View.InicioAlumnosView"
+             xmlns:vm="clr-namespace:CRUD_School.ViewModel">
+    <ContentPage.BindingContext>
+        <vm:InicioAlumnosViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AddAlumnoCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <ListView ItemsSource="{Binding Alumnos}" SelectedItem="{Binding AlumnoSelected}" HasUnevenRows="True">
+                    <ListView.Header>
+                        <Button Text="Ver detalle de victima" Command="{Binding DetailAlumnoCommand}"/>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Nombres}" Detail="{Binding Grado}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
